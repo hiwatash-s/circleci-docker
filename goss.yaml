@@ -1,0 +1,16 @@
+package:
+  httpd:
+    installed: true
+process:
+  httpd:
+    running: true
+port:
+  tcp:80:
+    listening: true
+file:
+  /var/www/html/index.html:
+    exists: true
+    filetype: file
+    contains:
+      - "circleci-docker-test-and-build"
+    
